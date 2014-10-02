@@ -10,6 +10,7 @@ public class Test {
 		/** ログインID. */
 		String TIME_FORMAT_YYYYMMDDHH = "yyyyMMddHH";
 		String abc = null;
+		//b2
 		Date date = null;
 		
 		System.out.println(stringToDate(abc, TIME_FORMAT_YYYYMMDDHH));
