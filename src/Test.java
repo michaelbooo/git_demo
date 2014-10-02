@@ -4,6 +4,12 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/*
+ * gitHib 
+ * username:michaelbooo
+ * password:MbXXXXXX
+ * 
+ */
 public class Test {
 
 	public static void main(String[] args) {
@@ -11,7 +17,7 @@ public class Test {
 		String TIME_FORMAT_YYYYMMDDHH = "yyyyMMddHH";
 		String abc = null;
 		Date date = null;
-		
+
 		System.out.println(stringToDate(abc, TIME_FORMAT_YYYYMMDDHH));
 		System.out.println(dateToString(date, TIME_FORMAT_YYYYMMDDHH));
 	}
@@ -31,7 +37,7 @@ public class Test {
 		return date;
 	}
 
-	public static String dateToString(Date date,String format) {
+	public static String dateToString(Date date, String format) {
 
 		if (date.equals(null))
 			return null;
