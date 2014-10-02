@@ -7,7 +7,6 @@ import java.util.Date;
 public class Test {
 
 	public static void main(String[] args) {
-		// this is for developer
 		/** ログインID. */
 		String TIME_FORMAT_YYYYMMDDHH = "yyyyMMddHH";
 		String abc = null;
