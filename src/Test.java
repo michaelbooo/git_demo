@@ -5,20 +5,20 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Test {
-
+//bb1
 	public static void main(String[] args) {
 		// this is for developer
 		/** ログインID. */
 		String TIME_FORMAT_YYYYMMDDHH = "yyyyMMddHH";
 		String abc = null;
 		Date date = null;
-		
+		//bb2		
 		System.out.println(stringToDate(abc, TIME_FORMAT_YYYYMMDDHH));
 		System.out.println(dateToString(date, TIME_FORMAT_YYYYMMDDHH));
 	}
-
+//bb3
 	public static Date stringToDate(String strDate, String format) {
-
+//bb4
 		if (strDate.isEmpty())
 			return null;
 
@@ -31,9 +31,9 @@ public class Test {
 		}
 		return date;
 	}
-
+	//bb5
 	public static String dateToString(Date date,String format) {
-
+		//bb6
 		if (date.equals(null))
 			return null;
 		String strDate = null;
@@ -41,7 +41,7 @@ public class Test {
 		strDate = df.format(date);
 		return strDate;
 	}
-
+	//bb7
 	public static String digest(final String manageNumber) {
 		final long hash = manageNumber.hashCode();
 		final int prime = getPrime(hash);
@@ -50,16 +50,16 @@ public class Test {
 		for (int i = 0; i < cArray.length; i++) {
 			calcedVal += cArray[i] * (prime - i);
 		}
-
+		//bb8
 		if (calcedVal < 4096) {
 			calcedVal *= 50;
 		}
-
+		//bb9
 		final StringBuffer buffer = new StringBuffer(
 				Long.toHexString(calcedVal)).reverse();
 		return buffer.substring(0, 4);
 	}
-
+	//bb10
 	private static char[] toCharArray(long hex) {
 		final char[] buf = new char[64];
 		int charPos = 64;
