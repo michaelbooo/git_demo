@@ -14,6 +14,7 @@ public class Test {
 		
 		System.out.println(stringToDate(abc, TIME_FORMAT_YYYYMMDDHH));
 		System.out.println(dateToString(date, TIME_FORMAT_YYYYMMDDHH));
+		//a002
 	}
 
 	public static Date stringToDate(String strDate, String format) {
