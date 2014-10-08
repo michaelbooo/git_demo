@@ -1,42 +1,11 @@
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
-public class Test {
+
+public class RmsurlNum {
+
 	public static void main(String[] args) {
+		final String urlNo = "b6ef455de726373389e79ca8ef5e2677";
+		System.out.println(digest(urlNo));
 
-		/** ログインID. */
-		String TIME_FORMAT_YYYYMMDDHH = "yyyyMMddHH";
-		String abc = null;
-		Date date = null;
-
-		System.out.println(stringToDate(abc, TIME_FORMAT_YYYYMMDDHH));
-		System.out.println(dateToString(date, TIME_FORMAT_YYYYMMDDHH));
-	}
-
-	public static Date stringToDate(String strDate, String format) {
-
-		if (strDate.isEmpty())
-			return null;
-
-		SimpleDateFormat sdf = new SimpleDateFormat(format);
-		Date date = null;
-		try {
-			date = sdf.parse(strDate);
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}
-		return date;
-	}
-
-	public static String dateToString(Date date, String format) {
-
-		if (date.equals(null))
-			return null;
-		String strDate = null;
-		SimpleDateFormat df = new SimpleDateFormat(format);
-		strDate = df.format(date);
-		return strDate;
 	}
 
 	public static String digest(final String manageNumber) {
@@ -69,15 +38,15 @@ public class Test {
 	static char[] toCharArray(long hex) {
 		char[] buf = new char[64];
 		int charPos = 64;
-		final int radix = 1 << 4;
-		final long mask = radix - 1;
+		int radix = 1 << 4;
+		long mask = radix - 1;
 		do {
 			buf[--charPos] = DIGITS[(int) (hex & mask)];
 			hex >>>= 4;
 		} while (hex != 0);
 
-		final int len = 64 - charPos;
-		final char[] result = new char[len];
+		int len = 64 - charPos;
+		char[] result = new char[len];
 		System.arraycopy(buf, charPos, result, 0, len);
 		return result;
 	}
